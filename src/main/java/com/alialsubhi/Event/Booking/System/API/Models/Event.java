@@ -18,12 +18,16 @@ import java.util.List;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @Column(nullable = false)
     String name;
 
+    @Column(nullable = false)
     LocalDate date;
 
+    @Column(nullable = false)
     String location;
 
+    @Column(nullable = false)
     int ticketAvailability;
 
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
